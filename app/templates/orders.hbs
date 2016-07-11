@@ -1,0 +1,13 @@
+Current Orders:
+
+Id: {{model.id}} Name: {{model.name}}
+
+{{#each model as |order|}}
+
+  {{#link-to "orders.order" order}}
+      <p>Order #{{order.id}} is for {{order.name}}</p>
+  {{/link-to}}
+
+{{/each}}
+
+{{outlet}}
